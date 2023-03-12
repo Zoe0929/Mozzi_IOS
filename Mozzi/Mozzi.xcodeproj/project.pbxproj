@@ -10,12 +10,12 @@
 		0938478ABAF2D9A864D7853B /* Pods_Mozzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A678B1984AD0EF610BC90F2 /* Pods_Mozzi.framework */; };
 		3628BC3A29A9E11200A59EE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628BC3929A9E11200A59EE8 /* AppDelegate.swift */; };
 		3628BC3C29A9E11200A59EE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628BC3B29A9E11200A59EE8 /* SceneDelegate.swift */; };
-		3628BC3E29A9E11200A59EE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628BC3D29A9E11200A59EE8 /* ViewController.swift */; };
-		3628BC4129A9E11200A59EE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3628BC3F29A9E11200A59EE8 /* Main.storyboard */; };
 		3628BC4329A9E11F00A59EE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3628BC4229A9E11F00A59EE8 /* Assets.xcassets */; };
 		3628BC4629A9E11F00A59EE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3628BC4429A9E11F00A59EE8 /* LaunchScreen.storyboard */; };
-		36348BB529B94AA000548051 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36348BB429B94AA000548051 /* MapView.swift */; };
 		36348BB729B94ABC00548051 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36348BB629B94ABC00548051 /* MapViewController.swift */; };
+		36348BC429BDE3B400548051 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36348BC329BDE3B400548051 /* MypageViewController.swift */; };
+		36348BC629BE11FB00548051 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36348BC529BE11FB00548051 /* Main.storyboard */; };
+		36348BC829BE141E00548051 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36348BC729BE141E00548051 /* MainTabBarController.swift */; };
 		36625E6429A9E972002F3E5F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36625E6329A9E972002F3E5F /* MainViewController.swift */; };
 		368AEE2C29ACBB6400E654F4 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368AEE2B29ACBB6400E654F4 /* HorizontalScrollView.swift */; };
 /* End PBXBuildFile section */
@@ -24,13 +24,13 @@
 		3628BC3629A9E11200A59EE8 /* Mozzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mozzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3628BC3929A9E11200A59EE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3628BC3B29A9E11200A59EE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3628BC3D29A9E11200A59EE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3628BC4029A9E11200A59EE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3628BC4229A9E11F00A59EE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3628BC4529A9E11F00A59EE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3628BC4729A9E11F00A59EE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36348BB429B94AA000548051 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		36348BB629B94ABC00548051 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		36348BC329BDE3B400548051 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
+		36348BC529BE11FB00548051 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		36348BC729BE141E00548051 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		36625E6329A9E972002F3E5F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		368AEE2B29ACBB6400E654F4 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
 		7A678B1984AD0EF610BC90F2 /* Pods_Mozzi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mozzi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,15 +73,15 @@
 			children = (
 				3628BC3929A9E11200A59EE8 /* AppDelegate.swift */,
 				3628BC3B29A9E11200A59EE8 /* SceneDelegate.swift */,
-				3628BC3D29A9E11200A59EE8 /* ViewController.swift */,
-				3628BC3F29A9E11200A59EE8 /* Main.storyboard */,
-				36625E6329A9E972002F3E5F /* MainViewController.swift */,
-				368AEE2B29ACBB6400E654F4 /* HorizontalScrollView.swift */,
 				3628BC4229A9E11F00A59EE8 /* Assets.xcassets */,
 				3628BC4429A9E11F00A59EE8 /* LaunchScreen.storyboard */,
 				3628BC4729A9E11F00A59EE8 /* Info.plist */,
-				36348BB429B94AA000548051 /* MapView.swift */,
+				368AEE2B29ACBB6400E654F4 /* HorizontalScrollView.swift */,
+				36348BC729BE141E00548051 /* MainTabBarController.swift */,
+				36625E6329A9E972002F3E5F /* MainViewController.swift */,
 				36348BB629B94ABC00548051 /* MapViewController.swift */,
+				36348BC329BDE3B400548051 /* MypageViewController.swift */,
+				36348BC529BE11FB00548051 /* Main.storyboard */,
 			);
 			path = Mozzi;
 			sourceTree = "<group>";
@@ -163,9 +163,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36348BC629BE11FB00548051 /* Main.storyboard in Resources */,
 				3628BC4629A9E11F00A59EE8 /* LaunchScreen.storyboard in Resources */,
 				3628BC4329A9E11F00A59EE8 /* Assets.xcassets in Resources */,
-				3628BC4129A9E11200A59EE8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,11 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3628BC3E29A9E11200A59EE8 /* ViewController.swift in Sources */,
-				36348BB529B94AA000548051 /* MapView.swift in Sources */,
 				368AEE2C29ACBB6400E654F4 /* HorizontalScrollView.swift in Sources */,
 				36348BB729B94ABC00548051 /* MapViewController.swift in Sources */,
 				3628BC3A29A9E11200A59EE8 /* AppDelegate.swift in Sources */,
+				36348BC829BE141E00548051 /* MainTabBarController.swift in Sources */,
+				36348BC429BDE3B400548051 /* MypageViewController.swift in Sources */,
 				3628BC3C29A9E11200A59EE8 /* SceneDelegate.swift in Sources */,
 				36625E6429A9E972002F3E5F /* MainViewController.swift in Sources */,
 			);
@@ -231,14 +231,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3628BC3F29A9E11200A59EE8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3628BC4029A9E11200A59EE8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3628BC4429A9E11F00A59EE8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -377,7 +369,7 @@
 				INFOPLIST_FILE = Mozzi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,7 +398,7 @@
 				INFOPLIST_FILE = Mozzi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

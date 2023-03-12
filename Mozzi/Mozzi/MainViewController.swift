@@ -19,9 +19,15 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
     }()
     fileprivate weak var fsCalendar: FSCalendar!
     lazy var profileButton: UIButton = UIButton()
-    lazy var hambugerButton: UIButton = UIButton()
+    lazy var alarmButton: UIButton = UIButton()
     lazy var recentLabel: UILabel = UILabel()
-        
+    
+    lazy var tabView = UIStackView()
+    lazy var mapButton = UIButton()
+    lazy var homeButton = UIButton()
+    lazy var proflieButton = UIButton()
+    
+
     override func loadView() {
         let view = UIView(frame: UIScreen.main.bounds)
             self.view = view
@@ -37,10 +43,7 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
 
       private func configure() {
           let fsCalendar = FSCalendar(frame: CGRect(x: 30, y: 150, width: 340, height: 400))
-
           let image = UIImage(named: "notification")
- 
-          
           
           fsCalendar.dataSource = self
           fsCalendar.delegate = self
@@ -51,26 +54,14 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
           fsCalendar.layer.shadowRadius = 0
           fsCalendar.layer.shadowColor = UIColor(named: "Dark Color")?.cgColor
           
-          self.tabBar.backgroundColor = UIColor(named: "main Color")
-          self.tabBar.tintColor = .red
-          self.tabBar.unselectedItemTintColor = .blue
-          
-          let firstVC = UINavigationController()
-          firstVC.tabBarItem.selectedImage = UIImage(systemName: "message")
-          firstVC.tabBarItem.title = "Recent"
-          firstVC.tabBarItem.image = UIImage(systemName: "message.fill")
-                  
-                  let dummyView = UIViewController()
-                  dummyView.view.backgroundColor = .yellow
-                  dummyView.tabBarItem.title = "Yellow Dummy"
-                  dummyView.tabBarItem.image = UIImage(systemName: "trash.fill")
-                  
-                  viewControllers = [firstVC, dummyView]
 
-          view.addSubview(hambugerButton)
+          
+          view.addSubview(alarmButton)
           view.addSubview(recentLabel)
           view.addSubview(fsCalendar)
           view.addSubview(horizontalScrollView)
+          
+          
           
           self.fsCalendar = fsCalendar
           fsCalendar.backgroundColor = .white
@@ -84,8 +75,8 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
           }
           
           
-          hambugerButton.setImage(image, for: .normal)
-          hambugerButton.snp.makeConstraints{ make in
+          alarmButton.setImage(image, for: .normal)
+          alarmButton.snp.makeConstraints{ make in
               make.top.equalToSuperview().offset(75)
               make.right.equalToSuperview().offset(-35)
               make.width.height.equalTo(40)
@@ -110,6 +101,7 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
           horizontalScrollView.dataSource = Mocks.getDataSource()
       }
     
+
 
     /*
     // MARK: - Navigation
