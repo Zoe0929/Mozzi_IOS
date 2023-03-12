@@ -44,7 +44,14 @@ class MainTabBarController: UITabBarController {
         self.tabBar.backgroundColor = UIColor(named: "Dark Color")
         // Do any additional setup after loading the view.
     }
-    
+    //탭바 높이 변경
+    override func viewDidLayoutSubviews() {
+                super.viewDidLayoutSubviews()
+                var tabFrame = self.tabBar.frame
+                tabFrame.size.height = 100
+                tabFrame.origin.y = self.view.frame.size.height - 100
+                self.tabBar.frame = tabFrame
+            }
 
     /*
     // MARK: - Navigation
