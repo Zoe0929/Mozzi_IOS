@@ -47,6 +47,12 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
           
           fsCalendar.dataSource = self
           fsCalendar.delegate = self
+          
+          fsCalendar.appearance.headerTitleColor = .black
+          fsCalendar.appearance.headerMinimumDissolvedAlpha = 0.0
+          fsCalendar.appearance.weekdayTextColor = UIColor(named: "main Color")
+          
+
           fsCalendar.layer.borderWidth = 3
           fsCalendar.layer.borderColor = UIColor(named: "main Color")?.cgColor
           fsCalendar.layer.shadowOffset = CGSize(width: 0, height: 10)
@@ -69,7 +75,7 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
           
           fsCalendar.snp.makeConstraints{ make in
               make.centerX.equalToSuperview()
-              make.top.equalToSuperview().offset(150)
+              make.top.equalToSuperview().offset(120)
               make.width.equalTo(340)
               make.height.equalTo(400)
           }
@@ -77,22 +83,22 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
           
           alarmButton.setImage(image, for: .normal)
           alarmButton.snp.makeConstraints{ make in
-              make.top.equalToSuperview().offset(75)
+              make.top.equalToSuperview().offset(50)
               make.right.equalToSuperview().offset(-35)
               make.width.height.equalTo(40)
               
           }
           
-          recentLabel.text = "최근 구매한 내용"
+          recentLabel.text = "Daily Use"
           recentLabel.snp.makeConstraints{ make in
-              make.top.equalTo(fsCalendar.snp.bottom).offset(15)
+              make.top.equalTo(fsCalendar.snp.bottom).offset(25)
               make.left.equalTo(30)
           }
           
           horizontalScrollView.snp.makeConstraints { make in
               make.width.equalToSuperview()
               make.height.equalTo(100)
-              make.top.equalTo(fsCalendar.snp.bottom).offset(40)
+              make.top.equalTo(recentLabel.snp.bottom).offset(10)
           }
 
       }
