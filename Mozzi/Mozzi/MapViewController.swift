@@ -7,14 +7,21 @@
 
 import UIKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MTMapViewDelegate {
+//
+    var mapView: MTMapView!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       mapView = MTMapView(frame: self.view.frame)
+       mapView.delegate = self
+       mapView.baseMapType = .standard
+        self.view.addSubview(mapView)
 
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation
