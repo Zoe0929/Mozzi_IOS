@@ -7,14 +7,32 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SignInViewController: UIViewController {
+    
     
     lazy var idField = UITextField()
     lazy var passwordField = UITextField()
+    lazy var inputStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.alignment = .fill
+        return stackView
+    }()
+    lazy var bottomStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        return stackView
+    }()
+    
     lazy var loginImageView = UIImageView()
     lazy var logoImageView = UIImageView()
     lazy var loginButton = UIButton()
-    lazy var signinButton = UIButton()
+    lazy var signUpButton = UIButton()
+    lazy var findPwButton = UIButton()
+    lazy var helpButton = UIButton()
     let backgroundImage = UIImage(named: "loginBackground")
     let logoImage = UIImage(named: "logo_w")
     let idPlaceholder = "이메일을 입력해주세요"
@@ -32,12 +50,12 @@ class LoginViewController: UIViewController {
         
         view.backgroundColor = .white
         view.addSubview(loginImageView)
+        view.addSubview(inputStackView)
+        view.addSubview(loginButton)
+        view.addSubview(signUpButton)
+        view.addSubview(bottomStackView)
         
         loginImageView.addSubview(logoImageView)
-        view.addSubview(idField)
-        view.addSubview(passwordField)
-        view.addSubview(loginButton)
-        view.addSubview(signinButton)
         
         loginImageView.image = backgroundImage
         loginImageView.snp.makeConstraints{make in
@@ -50,26 +68,27 @@ class LoginViewController: UIViewController {
             make.top.equalToSuperview().offset(160)
         }
         
+        [idField,passwordField].map{
+            inputStackView.addArrangedSubview($0)
+        }
         
-        idField.placeholder = idPlaceholder
-        idField.keyboardType = .emailAddress
-        idField.autocapitalizationType = .none
-        idField.snp.makeConstraints{ make in
-            make.centerX.equalToSuperview()
-            make.leading.equalTo(50)
-            make.trailing.equalTo(-50)
+        inputStackView.snp.makeConstraints { make in
+            make.top.equalTo(loginImageView.snp.bottom).offset(24)
+            make.left.equalToSuperview().offset(35)
+            make.height.equalTo(120)
             make.top.equalTo(loginImageView.snp.bottom).offset(30)
         }
         
+
+        idField.placeholder = idPlaceholder
+        idField.keyboardType = .emailAddress
+        idField.autocapitalizationType = .none
+
+
         passwordField.placeholder = passwordPlaceholder
         passwordField.isSecureTextEntry = true
         passwordField.autocapitalizationType = .none
-        passwordField.snp.makeConstraints{ make in
-                   make.centerX.equalTo(self.view)
-                   make.leading.equalTo(50)
-                   make.trailing.equalTo(-50)
-                   make.top.equalTo(idField.snp.bottom).offset(50)
-               }
+
         
         loginButton.backgroundColor = UIColor(named: "Dark Color")
         loginButton.setTitle("Login", for: .normal)
@@ -78,17 +97,35 @@ class LoginViewController: UIViewController {
             make.width.equalTo(312)
             make.height.equalTo(39)
             make.centerX.equalToSuperview()
-            make.top.equalTo(passwordField.snp.bottom).offset(50)
+            make.top.equalTo(inputStackView.snp.bottom).offset(47)
         }
-        
-        signinButton.setTitle("Sign up", for: .normal)
-        signinButton.setTitleColor(.secondaryLabel, for: .normal)
-        signinButton.snp.makeConstraints{make in
+//
+        signUpButton.setTitle("Sign up", for: .normal)
+        signUpButton.setTitleColor(.secondaryLabel, for: .normal)
+        signUpButton.snp.makeConstraints{make in
             make.width.equalTo(312)
             make.height.equalTo(39)
             make.centerX.equalToSuperview()
             make.top.equalTo(loginButton.snp.bottom).offset(10)
         }
+        
+        
+        [findPwButton,helpButton].map{
+            bottomStackView.addArrangedSubview($0)
+        }
+        bottomStackView.snp.makeConstraints{ make in
+            make.bottom.equalTo(view.snp.bottom).offset(-34)
+            make.left.equalToSuperview().offset(34)
+            make.width.equalTo(277)
+            make.height.equalTo(19)
+        }
+        
+        findPwButton.setTitle("비밀번호를 잊으셨나요?", for: .normal)
+        findPwButton.titleLabel?.font = UIFont.systemFont(ofSize: 9)
+        helpButton.setTitle("도움이 필요하신가요?", for: .normal)
+        helpButton.titleLabel?.font = UIFont.systemFont(ofSize: 9)
+        findPwButton.setTitleColor(.secondaryLabel, for: .normal)
+        helpButton.setTitleColor(.secondaryLabel, for: .normal)
     }
 
     /*

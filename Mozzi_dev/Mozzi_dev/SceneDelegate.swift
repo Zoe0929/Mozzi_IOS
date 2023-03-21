@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene) // SceneDelegate의 프로퍼티에 설정해줌
         
         
-        let mainViewController = LoginViewController()
+        let mainViewController = SignInViewController()
         let mainTabBarController = MainTabBarController()
         // 맨 처음 보여줄 ViewController
 
