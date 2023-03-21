@@ -15,6 +15,11 @@ class MypageViewController: UITabBarController {
         // Do any additional setup after loading the view.
     }
     
+    private func configure(){
+        view.backgroundColor = .white
+        
+    }
+    
 
     /*
     // MARK: - Navigation

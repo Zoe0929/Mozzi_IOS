@@ -9,47 +9,67 @@ import UIKit
 
 class MapViewController: UITabBarController {
     
+    lazy var topAreaView = UIImageView()
     lazy var SearchView = UIImageView()
     lazy var SearchTextField = UITextField()
     lazy var SearchButton = UIButton()
-    lazy var SocialButton = UIButton()
+    lazy var SocialButton = UIBarButtonItem()
+    lazy var searchBar = UISearchBar()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .green
         configure()
         // Do any additional setup after loading the view.
     }
     
     private func configure(){
         
-        let image = UIImage(named: "searchBar")
-        
-        view.addSubview(SearchView)
-        view.addSubview(SearchTextField)
-        view.addSubview(SearchButton)
-        view.addSubview(SocialButton)
+        let searchBarImage = UIImage(named: "searchBar")
+        let areaImage = UIImage(named: "topArea")
+        let socialImage = UIImage(named: "social")?.withRenderingMode(.alwaysOriginal)
         
         
-        SearchView.image = image
-        SearchView.snp.makeConstraints{make in
-            make.top.equalToSuperview().offset(65)
-            make.left.equalToSuperview().offset(8)
-            make.width.height.equalTo(40)
+        view.addSubview(topAreaView)
+        
+        topAreaView.image = areaImage
+        topAreaView.snp.makeConstraints{make in
+            make.top.equalToSuperview().offset(-5)
+            make.width.equalToSuperview()
         }
         
-        SearchButton.setImage(UIImage(named: "search"), for: .normal)
-        SearchButton.snp.makeConstraints{make in
-            make.top.equalToSuperview().offset(65)
-            make.right.equalToSuperview().offset(-44)
-            make.width.height.equalTo(40)
-        }
-        SocialButton.setImage(UIImage(named: "social"), for: .normal)
-        SocialButton.snp.makeConstraints{make in
-            make.top.equalToSuperview().offset(65)
-            make.right.equalToSuperview().offset(-8)
-            make.width.height.equalTo(40)
-        }
+        SocialButton.image = socialImage
+        self.navigationItem.rightBarButtonItem = SocialButton
+       
+        searchBar.placeholder = "검색어를 입력해주세요."
+        searchBar.backgroundImage = searchBarImage
+        self.navigationItem.titleView = searchBar
+        
+        topAreaView.addSubview(SearchView)
+       // topAreaView.addSubview(SearchButton)
+       // SearchView.addSubview(SearchTextField)
+        
+        
+//        SearchView.image = searchBarImage
+//        SearchView.snp.makeConstraints{make in
+//            make.top.equalToSuperview().offset(65)
+//            make.left.equalToSuperview().offset(8)
+//        }
+//
+//        SearchTextField.placeholder = "검색어를 입력해주세요"
+//        SearchTextField.snp.makeConstraints{make in
+//            make.top.equalToSuperview().offset(5)
+//            make.left.equalToSuperview().offset(5)
+//        }
+//
+//        SearchButton.setImage(UIImage(named: "search"), for: .normal)
+//        SearchButton.snp.makeConstraints{make in
+//            make.top.equalToSuperview().offset(65)
+//            make.right.equalToSuperview().offset(-44)
+//            make.width.height.equalTo(40)
+//        }
+        
+        
         
         
     }

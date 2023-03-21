@@ -23,8 +23,8 @@ class MainTabBarController: UITabBarController {
         let mypageImage = UIImage(named: "mypage")?.withRenderingMode(.alwaysOriginal)
         
         let selectedHomeImage = UIImage(named: "home_fill")?.withRenderingMode(.alwaysOriginal)
-        let selectedMapImage = UIImage(named: "map")?.withRenderingMode(.alwaysOriginal)
-        let selectedMypageImage = UIImage(named: "mypage")?.withRenderingMode(.alwaysOriginal)
+        let selectedMapImage = UIImage(named: "map_fill")?.withRenderingMode(.alwaysOriginal)
+        let selectedMypageImage = UIImage(named: "mypage_fill")?.withRenderingMode(.alwaysOriginal)
 
         self.viewControllers = [mapNC,mainNC,mypageNC]
                 

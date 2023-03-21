@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		363D368D29C9D81A00B37A21 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D368C29C9D81A00B37A21 /* LoginViewController.swift */; };
 		367899B029C053D200155269 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367899AF29C053D200155269 /* HorizontalScrollView.swift */; };
 		369A6F1029BF030D00414D23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A6F0F29BF030D00414D23 /* AppDelegate.swift */; };
 		369A6F1229BF030D00414D23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A6F1129BF030D00414D23 /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		106EF636BBE3844B0B5B8716 /* Pods-Mozzi_dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mozzi_dev.release.xcconfig"; path = "Target Support Files/Pods-Mozzi_dev/Pods-Mozzi_dev.release.xcconfig"; sourceTree = "<group>"; };
+		363D368C29C9D81A00B37A21 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		367899AF29C053D200155269 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
 		369A6F0C29BF030D00414D23 /* Mozzi_dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mozzi_dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369A6F0F29BF030D00414D23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				369A6F2829BF0C3D00414D23 /* MainViewController.swift */,
 				369A6F2A29BF0C4500414D23 /* MypageViewController.swift */,
 				367899AF29C053D200155269 /* HorizontalScrollView.swift */,
+				363D368C29C9D81A00B37A21 /* LoginViewController.swift */,
 			);
 			path = Mozzi_dev;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				367899B029C053D200155269 /* HorizontalScrollView.swift in Sources */,
 				369A6F2D29BF0C5B00414D23 /* MapViewController.swift in Sources */,
 				369A6F1229BF030D00414D23 /* SceneDelegate.swift in Sources */,
+				363D368D29C9D81A00B37A21 /* LoginViewController.swift in Sources */,
 				369A6F2429BF04E000414D23 /* MainTabBarController.swift in Sources */,
 				369A6F2B29BF0C4500414D23 /* MypageViewController.swift in Sources */,
 				369A6F2929BF0C3D00414D23 /* MainViewController.swift in Sources */,
