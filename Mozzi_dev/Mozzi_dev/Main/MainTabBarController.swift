@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +17,7 @@ class MainTabBarController: UITabBarController {
         let mapNC = UINavigationController.init(rootViewController: MapViewController())
         let mainNC = UINavigationController.init(rootViewController: MainViewController())
         let mypageNC = UINavigationController.init(rootViewController: MypageViewController())
+
         
         let homeImage = UIImage(named: "home")?.withRenderingMode(.alwaysOriginal)
         let mapImage = UIImage(named: "map")?.withRenderingMode(.alwaysOriginal)
@@ -42,7 +43,10 @@ class MainTabBarController: UITabBarController {
         
         self.selectedIndex = 1 // 원하는 인덱스
         self.tabBar.backgroundColor = UIColor(named: "Dark Color")
-        // Do any additional setup after loading the view.
+
+                
+      //  self.setRightBarButton(notificationNavItem, animated: false)
+        
     }
     //탭바 높이 변경
     override func viewDidLayoutSubviews() {
