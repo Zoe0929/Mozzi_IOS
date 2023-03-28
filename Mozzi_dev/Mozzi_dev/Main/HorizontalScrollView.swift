@@ -26,46 +26,6 @@ class BaseScrollView: UIScrollView {
     func bind() {}
 }
 
-struct SomeDataModel {
-    enum DataModelType: String {
-        case one
-        case two
-        case three
-        case four
-        case five
-        case six
-    }
-
-    let type: DataModelType
-
-    var name: String {
-        return type.rawValue
-    }
-
-    var iamge: UIImage {
-        switch type {
-        case .one: return UIImage(named: "icon")!
-        case .two: return UIImage(named: "icon")!
-        case .three: return UIImage(named: "icon")!
-        case .four: return UIImage(named: "icon")!
-        case .five: return UIImage(named: "icon")!
-        case .six: return UIImage(named: "icon")!
-        }
-    }
-
-}
-
-struct Mocks {
-    static func getDataSource() -> [SomeDataModel] {
-        return [SomeDataModel(type: .one),
-                SomeDataModel(type: .two),
-                SomeDataModel(type: .three),
-                SomeDataModel(type: .four),
-                SomeDataModel(type: .five),
-                SomeDataModel(type: .six)]
-    }
-}
-
 
 class HorizontalScrollView: BaseScrollView {
     
@@ -100,8 +60,6 @@ class HorizontalScrollView: BaseScrollView {
             button.layer.cornerRadius = 30
             button.setTitleColor(.darkGray, for: .normal)
             button.setTitle(data.name, for: .normal)
-           // button.setImage(data.iamge, for: .normal)
-           // button.imageEdgeInsets = UIEdgeInsets(top: 0.0, left: -4.0, bottom: 0.0, right: 2.0)
             button.backgroundColor = UIColor(named: "Dark Color")
 
             stackView.addArrangedSubview(button)

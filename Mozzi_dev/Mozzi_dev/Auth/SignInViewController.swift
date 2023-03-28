@@ -38,6 +38,8 @@ class SignInViewController: UIViewController {
     let idPlaceholder = "이메일을 입력해주세요"
     let passwordPlaceholder = "비밀번호를 입력해주세요"
     
+    let signUpViewController = SignUpViewController()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,7 +128,10 @@ class SignInViewController: UIViewController {
         helpButton.titleLabel?.font = UIFont.systemFont(ofSize: 9)
         findPwButton.setTitleColor(.secondaryLabel, for: .normal)
         helpButton.setTitleColor(.secondaryLabel, for: .normal)
+
+        
     }
+    
 
     /*
     // MARK: - Navigation
