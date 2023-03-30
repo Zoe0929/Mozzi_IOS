@@ -28,6 +28,9 @@
 		369A6F2D29BF0C5B00414D23 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A6F2C29BF0C5B00414D23 /* MapViewController.swift */; };
 		36E8595729D1AF2D00D3CA7D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E8595629D1AF2D00D3CA7D /* Model.swift */; };
 		36E8595929D1BA1000D3CA7D /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E8595829D1BA1000D3CA7D /* NotificationTableViewCell.swift */; };
+		36FB763729D60FD10070ED30 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB763629D60FD10070ED30 /* AddButton.swift */; };
+		36FB763929D6145B0070ED30 /* profileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB763829D6145B0070ED30 /* profileView.swift */; };
+		36FB763B29D614730070ED30 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB763A29D614730070ED30 /* WishListView.swift */; };
 		7D29C163E82AC866B7036818 /* Pods_Mozzi_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DD4D0015F00E173C9BC381 /* Pods_Mozzi_dev.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		369A6F2C29BF0C5B00414D23 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		36E8595629D1AF2D00D3CA7D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		36E8595829D1BA1000D3CA7D /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		36FB763629D60FD10070ED30 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		36FB763829D6145B0070ED30 /* profileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileView.swift; sourceTree = "<group>"; };
+		36FB763A29D614730070ED30 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		99A88059C88AF3012AABBE6D /* Pods-Mozzi_dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mozzi_dev.debug.xcconfig"; path = "Target Support Files/Pods-Mozzi_dev/Pods-Mozzi_dev.debug.xcconfig"; sourceTree = "<group>"; };
 		E4DD4D0015F00E173C9BC381 /* Pods_Mozzi_dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mozzi_dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,6 +141,9 @@
 				367899AF29C053D200155269 /* HorizontalScrollView.swift */,
 				36878AE029CC2C34007F6DE5 /* NotificationTableViewController.swift */,
 				36E8595829D1BA1000D3CA7D /* NotificationTableViewCell.swift */,
+				36FB763629D60FD10070ED30 /* AddButton.swift */,
+				36FB763829D6145B0070ED30 /* profileView.swift */,
+				36FB763A29D614730070ED30 /* WishListView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -283,14 +292,17 @@
 				36E8595929D1BA1000D3CA7D /* NotificationTableViewCell.swift in Sources */,
 				36878AC829CB05BE007F6DE5 /* SignUpViewController.swift in Sources */,
 				363D369729CA104400B37A21 /* SignInView.swift in Sources */,
+				36FB763729D60FD10070ED30 /* AddButton.swift in Sources */,
 				369A6F1029BF030D00414D23 /* AppDelegate.swift in Sources */,
 				367899B029C053D200155269 /* HorizontalScrollView.swift in Sources */,
 				369A6F2D29BF0C5B00414D23 /* MapViewController.swift in Sources */,
 				363D369929CA292900B37A21 /* UserInfoModel.swift in Sources */,
+				36FB763929D6145B0070ED30 /* profileView.swift in Sources */,
 				36E8595729D1AF2D00D3CA7D /* Model.swift in Sources */,
 				369A6F1229BF030D00414D23 /* SceneDelegate.swift in Sources */,
 				363D368D29C9D81A00B37A21 /* SignInViewController.swift in Sources */,
 				369A6F2429BF04E000414D23 /* MainTabBarController.swift in Sources */,
+				36FB763B29D614730070ED30 /* WishListView.swift in Sources */,
 				36878AE129CC2C34007F6DE5 /* NotificationTableViewController.swift in Sources */,
 				369A6F2B29BF0C4500414D23 /* MypageViewController.swift in Sources */,
 				369A6F2929BF0C3D00414D23 /* MainViewController.swift in Sources */,

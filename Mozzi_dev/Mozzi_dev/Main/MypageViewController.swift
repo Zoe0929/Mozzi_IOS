@@ -11,13 +11,10 @@ import SnapKit
 class MypageViewController: UITabBarController {
     
     let mypageBackgroundImage = UIImage(named: "profileBackground")
-    let addProfileImage = UIImage(named: "addProfile")
+
     lazy var mypageBackgroundImageView = UIImageView(image: mypageBackgroundImage)
-    lazy var profileAddButton: UIButton = {
-        let button = UIButton()
-        button.setImage(addProfileImage, for: .normal)
-        return button
-    }()
+    lazy var profileView = Mozzi_dev.profileView()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,17 +29,19 @@ class MypageViewController: UITabBarController {
     private func setViewHierarchy(){
         view.backgroundColor = .white
         view.addSubview(mypageBackgroundImageView)
-        view.addSubview(profileAddButton)
+        view.addSubview(profileView)
+        
     }
     
     private func setLayout(){
         mypageBackgroundImageView.snp.makeConstraints{make in
-            make.top.leading.width.equalToSuperview()
+            make.top.leading.trailing.equalToSuperview()
         }
-        profileAddButton.snp.makeConstraints{make in
+        profileView.snp.makeConstraints{make in
             make.top.equalToSuperview().offset(60)
             make.centerX.equalToSuperview()
         }
+
     }
 
     /*
