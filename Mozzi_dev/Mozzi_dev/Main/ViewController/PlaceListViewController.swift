@@ -7,7 +7,7 @@
 import UIKit
 import SnapKit
 
-class PlaceListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PlaceListViewController: UIViewController {
 
     
     
@@ -16,38 +16,38 @@ class PlaceListViewController: UIViewController, UITableViewDataSource, UITableV
         return tableView
     }()
     
+    private var placeListTableViewCell = PlaceListTableViewCell()
+    
+    
     private(set) lazy var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
-    
     private func configure(){
         setViewHierarchy()
         setLayout()
     }
     
     private func setViewHierarchy(){
-        placeTableView.dataSource = self
-        placeTableView.delegate = self
+      //  placeTableView.dataSource = self
+       // placeTableView.delegate = self
         view.backgroundColor = .white
         //view.addSubview(collectionView)
     }
     
     private func setLayout(){
-        placeTableView.snp.makeConstraints{ make in
-            make.edges.equalToSuperview()
-        }
     }
     
+/*
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         <#code#>
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         <#code#>
-    }
+    }*/
     
 }
 

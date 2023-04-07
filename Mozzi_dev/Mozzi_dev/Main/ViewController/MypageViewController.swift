@@ -14,6 +14,7 @@ class MypageViewController: UITabBarController {
 
     lazy var mypageBackgroundImageView = UIImageView(image: mypageBackgroundImage)
     lazy var profileView = Mozzi_dev.profileView()
+    lazy var wishLishView = WishListView()
 
 
     override func viewDidLoad() {
@@ -30,6 +31,7 @@ class MypageViewController: UITabBarController {
         view.backgroundColor = .white
         view.addSubview(mypageBackgroundImageView)
         view.addSubview(profileView)
+        view.addSubview(wishLishView)
         
     }
     
@@ -40,6 +42,9 @@ class MypageViewController: UITabBarController {
         profileView.snp.makeConstraints{make in
             make.top.equalToSuperview().offset(60)
             make.centerX.equalToSuperview()
+        }
+        wishLishView.snp.makeConstraints{make in
+            make.top.equalTo(profileView.snp.bottom).offset(10)
         }
 
     }
