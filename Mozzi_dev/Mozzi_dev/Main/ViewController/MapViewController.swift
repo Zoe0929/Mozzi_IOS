@@ -16,16 +16,11 @@ class MapViewController: UITabBarController {
     lazy var SearchButton = UIButton()
     lazy var SocialButton = UIBarButtonItem()
     lazy var searchBar = UISearchBar()
+    let placeListView = PlaceListView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setPlaceListView()
         configure()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        setPlaceListView()
     }
     
     private func configure(){
@@ -52,6 +47,13 @@ class MapViewController: UITabBarController {
         self.navigationItem.titleView = searchBar
         
         topAreaView.addSubview(SearchView)
+        
+        view.addSubview(placeListView)
+        
+        placeListView.snp.makeConstraints{
+            $0.bottom.width.equalToSuperview()
+            $0.height.equalTo(300)
+        }
         
     }
     

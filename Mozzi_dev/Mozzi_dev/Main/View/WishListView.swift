@@ -15,13 +15,14 @@ class WishListView: UIView {
         let label = UILabel()
         label.text = "닌텐도 스위치"
         label.font = .systemFont(ofSize: 14)
-    }
+        return label
+    }()
     
     private let wishImage = UIImage(named:"wishImage")
     
     private let wishImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = wishImage
+        imageView.image = UIImage(named:"wishImage")
         return imageView
     }()
     
@@ -29,13 +30,13 @@ class WishListView: UIView {
         let button = UIButton()
         button.setImage(UIImage(named: "buttonBackground_2"), for: .normal)
         button.setTitle("New", for: .normal)
-        return imageView
+        return button
     }()
     
     private let minusButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "minus"), for: .normal)
-        return imageView
+        return button
     }()
     
     private lazy var newButtonStack: UIStackView = {
