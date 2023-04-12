@@ -60,6 +60,9 @@ class PlaceListView: UIView {
         self.backgroundColor = .white
         self.addSubview(handleView)
         
+        
+        
+        
         handleView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
             $0.centerX.equalToSuperview()

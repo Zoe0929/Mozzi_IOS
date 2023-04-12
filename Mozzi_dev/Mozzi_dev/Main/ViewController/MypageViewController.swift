@@ -45,6 +45,7 @@ class MypageViewController: UITabBarController {
         }
         wishLishView.snp.makeConstraints{make in
             make.top.equalTo(profileView.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview()
         }
 
     }
