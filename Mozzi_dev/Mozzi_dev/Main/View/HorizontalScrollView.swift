@@ -33,7 +33,8 @@ class HorizontalScrollView: BaseScrollView {
     private lazy var stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .horizontal
-        view.spacing = 30.0
+        view.layoutMargins = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30)
+        view.spacing = 30
         return view
     }()
     
@@ -58,17 +59,17 @@ class HorizontalScrollView: BaseScrollView {
 
         dataSource?.forEach { data in
             let button = UIButton()
-            button.layer.cornerRadius = 30
+            button.makeCornerRound(radius: 40)
+            button.makeShadow(radius: 0, offset: CGSize(width: 3, height: 3), opacity: 0.8)
+            button.layer.shadowColor = UIColor.mozziDark.cgColor
             button.setTitleColor(.darkGray, for: .normal)
             button.setTitle(data.name, for: .normal)
-            button.backgroundColor = UIColor(named: "Dark Color")
+            button.backgroundColor = .mozziMain
 
             stackView.addArrangedSubview(button)
             button.snp.makeConstraints { make in
-                make.width.equalTo(240)
+                make.width.equalTo(150)
                 make.height.equalTo(80)
-               // make.bottom.equalToSuperview().offset(-15)
-                make.top.equalToSuperview().offset(15)
             }
         }
     }

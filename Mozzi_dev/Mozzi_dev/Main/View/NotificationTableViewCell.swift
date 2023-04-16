@@ -34,10 +34,8 @@ class NotificationTableViewCell: UITableViewCell {
 
     private func setViewHierarchy(){
         
-        self.addSubview(iconImageView)
-        self.addSubview(notiTitle)
-        self.addSubview(notiDescription)
-        self.addSubview(dateLabel)
+        self.addSubviews(notiTitle,notiDescription,dateLabel)
+        
         
         iconImageView.snp.makeConstraints{make in
             make.leading.equalToSuperview().inset(10)
@@ -67,15 +65,7 @@ class NotificationTableViewCell: UITableViewCell {
             make.leading.equalTo(iconImageView.snp.trailing).offset(10)
             
         }
-        /*
-         self.addSubview(notiTitle)
-         
-         notiTitle.text = "알림 이름"
-        notiTitle.snp.makeConstraints{make in
-            make.top.equalToSuperview().offset(10)
-            make.leading.equalToSuperview().offset(50)
-        }
-         */
+        
     }
     
 

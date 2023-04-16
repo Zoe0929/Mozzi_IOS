@@ -11,12 +11,16 @@
 		36110C2529E3BC0D000ED129 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36110C2429E3BC0D000ED129 /* UIStackView+.swift */; };
 		36110C6429E58170000ED129 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 36110C6329E58170000ED129 /* Alamofire */; };
 		36110C6629E592A4000ED129 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36110C6529E592A4000ED129 /* UIColor+.swift */; };
+		36110C6829E71235000ED129 /* StampImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36110C6729E71235000ED129 /* StampImageCell.swift */; };
+		36110C6B29E729AB000ED129 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 36110C6A29E729AB000ED129 /* Then */; };
+		36110C6E29E72D7B000ED129 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36110C6D29E72D7B000ED129 /* Image.swift */; };
 		3637A49C29DAF3D900289A15 /* PlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3637A49B29DAF3D900289A15 /* PlaceListViewController.swift */; };
 		3637A4A829DB43D300289A15 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3637A4A729DB43D300289A15 /* MapView.swift */; };
 		3637A4D229DDA4B200289A15 /* PlaceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3637A4D129DDA4B200289A15 /* PlaceListTableViewCell.swift */; };
 		363D368D29C9D81A00B37A21 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D368C29C9D81A00B37A21 /* SignInViewController.swift */; };
 		363D369729CA104400B37A21 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D369629CA104400B37A21 /* SignInView.swift */; };
 		363D369929CA292900B37A21 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D369829CA292900B37A21 /* UserInfoModel.swift */; };
+		3663C98529EAA63C00E64A0A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663C98429EAA63C00E64A0A /* CameraViewController.swift */; };
 		367899B029C053D200155269 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367899AF29C053D200155269 /* HorizontalScrollView.swift */; };
 		36878AC829CB05BE007F6DE5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36878AC729CB05BE007F6DE5 /* SignUpViewController.swift */; };
 		36878AE129CC2C34007F6DE5 /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36878AE029CC2C34007F6DE5 /* NotificationTableViewController.swift */; };
@@ -42,6 +46,8 @@
 		36110C2229E3BBA2000ED129 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		36110C2429E3BC0D000ED129 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36110C6529E592A4000ED129 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		36110C6729E71235000ED129 /* StampImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampImageCell.swift; sourceTree = "<group>"; };
+		36110C6D29E72D7B000ED129 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3637A49B29DAF3D900289A15 /* PlaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewController.swift; sourceTree = "<group>"; };
 		3637A4A229DAF8D700289A15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3637A4A729DB43D300289A15 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -49,6 +55,7 @@
 		363D368C29C9D81A00B37A21 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		363D369629CA104400B37A21 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		363D369829CA292900B37A21 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		3663C98429EAA63C00E64A0A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		367899AF29C053D200155269 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
 		36878AC729CB05BE007F6DE5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		36878AE029CC2C34007F6DE5 /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +85,7 @@
 				36110C6429E58170000ED129 /* Alamofire in Frameworks */,
 				369B6E3B29E044E900391F13 /* SnapKit in Frameworks */,
 				369B6E3E29E044F600391F13 /* FSCalendar in Frameworks */,
+				36110C6B29E729AB000ED129 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +102,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		36110C6C29E72D65000ED129 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				36110C6D29E72D7B000ED129 /* Image.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 		3637A49D29DAF45400289A15 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +121,7 @@
 				36FB763A29D614730070ED30 /* WishListView.swift */,
 				3637A4A729DB43D300289A15 /* MapView.swift */,
 				369B6E3F29E04B8900391F13 /* PlaceListView.swift */,
+				36110C6729E71235000ED129 /* StampImageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,6 +135,7 @@
 				369A6F2829BF0C3D00414D23 /* MainViewController.swift */,
 				369A6F2A29BF0C4500414D23 /* MypageViewController.swift */,
 				36878AE029CC2C34007F6DE5 /* NotificationTableViewController.swift */,
+				3663C98429EAA63C00E64A0A /* CameraViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -150,6 +168,7 @@
 		369A6F0E29BF030D00414D23 /* Mozzi_dev */ = {
 			isa = PBXGroup;
 			children = (
+				36110C6C29E72D65000ED129 /* Structs */,
 				36110C2129E3BB8F000ED129 /* Extension */,
 				36E8595529D1AF1A00D3CA7D /* Model */,
 				36E8595229CDF40A00D3CA7D /* Main */,
@@ -211,6 +230,7 @@
 				369B6E3A29E044E900391F13 /* SnapKit */,
 				369B6E3D29E044F600391F13 /* FSCalendar */,
 				36110C6329E58170000ED129 /* Alamofire */,
+				36110C6A29E729AB000ED129 /* Then */,
 			);
 			productName = Mozzi_dev;
 			productReference = 369A6F0C29BF030D00414D23 /* Mozzi_dev.app */;
@@ -244,6 +264,7 @@
 				369B6E3929E044E900391F13 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				369B6E3C29E044F600391F13 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				36110C6229E58170000ED129 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				36110C6929E729AB000ED129 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 369A6F0D29BF030D00414D23 /* Products */;
 			projectDirPath = "";
@@ -279,6 +300,7 @@
 				367899B029C053D200155269 /* HorizontalScrollView.swift in Sources */,
 				369A6F2D29BF0C5B00414D23 /* MapViewController.swift in Sources */,
 				3637A4D229DDA4B200289A15 /* PlaceListTableViewCell.swift in Sources */,
+				36110C6829E71235000ED129 /* StampImageCell.swift in Sources */,
 				36110C2329E3BBA2000ED129 /* UIView+.swift in Sources */,
 				363D369929CA292900B37A21 /* UserInfoModel.swift in Sources */,
 				36FB763929D6145B0070ED30 /* profileView.swift in Sources */,
@@ -287,8 +309,10 @@
 				363D368D29C9D81A00B37A21 /* SignInViewController.swift in Sources */,
 				3637A49C29DAF3D900289A15 /* PlaceListViewController.swift in Sources */,
 				369A6F2429BF04E000414D23 /* MainTabBarController.swift in Sources */,
+				3663C98529EAA63C00E64A0A /* CameraViewController.swift in Sources */,
 				36FB763B29D614730070ED30 /* WishListView.swift in Sources */,
 				36110C6629E592A4000ED129 /* UIColor+.swift in Sources */,
+				36110C6E29E72D7B000ED129 /* Image.swift in Sources */,
 				36878AE129CC2C34007F6DE5 /* NotificationTableViewController.swift in Sources */,
 				3637A4A829DB43D300289A15 /* MapView.swift in Sources */,
 				369B6E4029E04B8900391F13 /* PlaceListView.swift in Sources */,
@@ -514,6 +538,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		36110C6929E729AB000ED129 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		369B6E3929E044E900391F13 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -537,6 +569,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 36110C6229E58170000ED129 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		36110C6A29E729AB000ED129 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36110C6929E729AB000ED129 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 		369B6E3A29E044E900391F13 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

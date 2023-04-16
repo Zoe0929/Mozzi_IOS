@@ -19,6 +19,7 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
         return view
     }()
     
+    
     let backBarButtonItem = UIBarButtonItem(title: "이전", style: .plain, target: MainViewController.self, action: nil)
     fileprivate weak var fsCalendar: FSCalendar!
     lazy var profileButton: UIButton = UIButton()
@@ -29,8 +30,51 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
         return button
     }()
     
+    lazy var addButton: UIButton = {
+        let button = UIButton()
+        button.setImage(Images.plusButtonImage, for: .normal)
+        button.setImage(Images.plusButtonTapImage, for: .selected)
+        button.addTarget(self, action: #selector(addButtonDidTap), for: .touchUpInside)
+        return button
+    }()
     
+    lazy var cameraButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("더하기", for: .normal)
+        button.setImage(Images.cameraButtonImage, for: .normal)
+        button.backgroundColor = .mozziMain
+        button.addTarget(self, action: #selector(writeButtonDidTap), for: .touchUpInside)
+        return button
+    }()
     
+    lazy var fileButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("파일 추가", for: .normal)
+        button.setImage(Images.fileButtonImage, for: .normal)
+        button.backgroundColor = .mozziMain
+        return button
+    }()
+    
+    lazy var writeButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("기록하기", for: .normal)
+        button.setImage(Images.writeButtonImage, for: .normal)
+        button.backgroundColor = .mozziMain
+        return button
+    }()
+    
+    lazy var buttonStack: UIStackView = {
+        let stackView = UIStackView()
+        stackView.addArrangeSubViews(cameraButton,fileButton,writeButton)
+        stackView.axis = .vertical
+        stackView.makeCornerRound(radius: 10)
+        stackView.isHidden = true
+        return stackView
+    }()
+    
+    lazy var buttons: [UIButton] = [self.cameraButton, self.fileButton, self.writeButton]
+    var buttonIsHidden: Bool = true
+
     override func loadView() {
         let view = UIView(frame: UIScreen.main.bounds)
         self.view = view
@@ -46,6 +90,47 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.navigationBar.backgroundColor = .none
+    }
+    
+    private var flag: Bool = false
+    @objc func addButtonDidTap(_ sender: UIButton){
+//        let image = self.buttonIsHidden ? Images.plusButtonImage : Images.plusButtonTapImage
+        
+//        sender.setImage(image, for: .normal)
+        sender.isSelected = !sender.isSelected
+        UIView.animate(withDuration: 0.5) {
+            if self.buttonIsHidden {
+                sender.transform = CGAffineTransform(rotationAngle: .pi - (.pi / 2))
+            } else {
+                sender.transform = .identity
+            }
+        }
+        buttonIsHidden = !buttonIsHidden
+
+//
+//        let roatation = buttonIsHidden ? CGAffineTransform(rotationAngle: .pi - (.pi / 2)) : CGAffineTransform.identity
+        
+        
+        if buttonIsHidden {
+            buttons.reversed().forEach { button in
+                UIView.animate(withDuration: 0.3) {
+                    button.isHidden = true
+                    self.view.layoutIfNeeded()
+                }
+            }
+        } else{
+            buttonStack.isHidden = buttonIsHidden
+            buttons.forEach { [weak self] button in
+                button.isHidden = false
+                button.alpha = 0
+
+                UIView.animate(withDuration: 0.3) {
+                    button.alpha = 1
+                    self?.view.layoutIfNeeded()
+                }
+            }
+        }
+        
     }
     
     private func configure() {
@@ -76,8 +161,8 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
         view.addSubview(recentLabel)
         view.addSubview(fsCalendar)
         view.addSubview(horizontalScrollView)
-        
-        
+        view.addSubview(addButton)
+        view.addSubview(buttonStack)
         
         self.fsCalendar = fsCalendar
         fsCalendar.backgroundColor = .white
@@ -103,6 +188,15 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
             make.height.equalTo(100)
             make.top.equalTo(recentLabel.snp.bottom).offset(10)
         }
+        addButton.snp.makeConstraints{ make in
+            make.trailing.equalToSuperview().inset(30)
+            make.bottom.equalToSuperview().inset(130)
+        }
+        
+        buttonStack.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(30)
+            $0.bottom.equalTo(addButton.snp.top).offset(-20)
+        }
         
     }
     
@@ -113,9 +207,12 @@ class MainViewController: UITabBarController,FSCalendarDelegate,FSCalendarDataSo
     @objc func tapButton(_ button: UIBarButtonItem){
         let notificationVC = NotificationTableViewController()
         self.navigationController?.pushViewController(notificationVC, animated: true)
-       
     }
     
+    @objc func writeButtonDidTap (){
+        let nextVC = CameraViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
     
     /*
      // MARK: - Navigation

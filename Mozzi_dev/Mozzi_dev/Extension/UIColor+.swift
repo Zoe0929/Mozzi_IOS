@@ -18,5 +18,9 @@ extension UIColor {
     class var mozziMain: UIColor {
         return UIColor(r: 158, g: 195, b: 165)
     }
+    
+    class var mozziDark: UIColor {
+        return UIColor(r: 158, g: 195,b: 165)
+    }
         //위와 같은형식으로 원하는 색상 추가 가능
 }

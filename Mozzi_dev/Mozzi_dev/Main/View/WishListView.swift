@@ -14,8 +14,9 @@ class WishListView: UIView {
     
     private let wishLabel: UILabel = {
         let label = UILabel()
-        label.text = "닌텐도 스위치"
-        label.font = .systemFont(ofSize: 14)
+        label.text = "위시리스트"
+        label.font = .systemFont(ofSize: 20)
+        label.textColor = .mozziMain
         return label
     }()
     
@@ -60,7 +61,6 @@ class WishListView: UIView {
         stackView.addArrangeSubViews(newButton,minusButton)
         stackView.spacing = 10
         stackView.axis = .vertical
-        stackView.alignment = .center
         return stackView
     }()
     
@@ -69,16 +69,23 @@ class WishListView: UIView {
         stackView.addArrangeSubViews(valButton,plusButton)
         stackView.spacing = 10
         stackView.axis = .vertical
-        stackView.alignment = .center
         return stackView
     }()
     
     private lazy var wishStackView:UIStackView  = {
         let stackView = UIStackView()
         stackView.addArrangeSubViews(wishImageView,newButtonStack,valButtonStack)
-        stackView.spacing = 10
+        stackView.spacing = 25
         stackView.axis = .horizontal
         return stackView
+    }()
+    
+    private let valSlider: UISlider = {
+       let slider = UISlider()
+        slider.tintColor = .mozziMain
+        slider.minimumValue = 0
+        slider.maximumValue = 100000
+        return slider
     }()
 
     required init?(coder: NSCoder) {
@@ -95,7 +102,7 @@ class WishListView: UIView {
 private extension WishListView {
     func setLayout() {
         
-        addSubviews(wishLabel,wishStackView)
+        addSubviews(wishLabel,wishStackView,valSlider)
         
         wishLabel.snp.makeConstraints{
             $0.top.equalToSuperview().offset(10)
@@ -103,6 +110,10 @@ private extension WishListView {
         }
         wishStackView.snp.makeConstraints{
             $0.top.equalTo(wishLabel.snp.bottom).offset(30)
+            $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        valSlider.snp.makeConstraints{
+            $0.top.equalTo(wishStackView.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(20)
         }
     }
