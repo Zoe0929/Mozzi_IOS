@@ -21,6 +21,10 @@
 		363D369729CA104400B37A21 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D369629CA104400B37A21 /* SignInView.swift */; };
 		363D369929CA292900B37A21 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D369829CA292900B37A21 /* UserInfoModel.swift */; };
 		3663C98529EAA63C00E64A0A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663C98429EAA63C00E64A0A /* CameraViewController.swift */; };
+		3663C99229EC7F2E00E64A0A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663C99129EC7F2E00E64A0A /* UIViewController+.swift */; };
+		3663C99429EC82B700E64A0A /* WritingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663C99329EC82B700E64A0A /* WritingPageViewController.swift */; };
+		3663C99629EC835300E64A0A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663C99529EC835300E64A0A /* BaseView.swift */; };
+		3663C99929EC83E200E64A0A /* WritingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663C99829EC83E200E64A0A /* WritingPageView.swift */; };
 		367899B029C053D200155269 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367899AF29C053D200155269 /* HorizontalScrollView.swift */; };
 		36878AC829CB05BE007F6DE5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36878AC729CB05BE007F6DE5 /* SignUpViewController.swift */; };
 		36878AE129CC2C34007F6DE5 /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36878AE029CC2C34007F6DE5 /* NotificationTableViewController.swift */; };
@@ -40,6 +44,9 @@
 		36FB763729D60FD10070ED30 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB763629D60FD10070ED30 /* AddButton.swift */; };
 		36FB763929D6145B0070ED30 /* profileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB763829D6145B0070ED30 /* profileView.swift */; };
 		36FB763B29D614730070ED30 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB763A29D614730070ED30 /* WishListView.swift */; };
+		36FDB8D529ED9A3E001BF247 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FDB8D429ED9A3E001BF247 /* HeartView.swift */; };
+		36FDB8D729EDB2EC001BF247 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FDB8D629EDB2EC001BF247 /* UploadViewController.swift */; };
+		36FDB8D929EDB38E001BF247 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FDB8D829EDB38E001BF247 /* UploadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +63,10 @@
 		363D369629CA104400B37A21 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		363D369829CA292900B37A21 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		3663C98429EAA63C00E64A0A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		3663C99129EC7F2E00E64A0A /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		3663C99329EC82B700E64A0A /* WritingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPageViewController.swift; sourceTree = "<group>"; };
+		3663C99529EC835300E64A0A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		3663C99829EC83E200E64A0A /* WritingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPageView.swift; sourceTree = "<group>"; };
 		367899AF29C053D200155269 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
 		36878AC729CB05BE007F6DE5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		36878AE029CC2C34007F6DE5 /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +86,9 @@
 		36FB763629D60FD10070ED30 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		36FB763829D6145B0070ED30 /* profileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileView.swift; sourceTree = "<group>"; };
 		36FB763A29D614730070ED30 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
+		36FDB8D429ED9A3E001BF247 /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
+		36FDB8D629EDB2EC001BF247 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		36FDB8D829EDB38E001BF247 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +112,8 @@
 				36110C2229E3BBA2000ED129 /* UIView+.swift */,
 				36110C2429E3BC0D000ED129 /* UIStackView+.swift */,
 				36110C6529E592A4000ED129 /* UIColor+.swift */,
+				3663C99129EC7F2E00E64A0A /* UIViewController+.swift */,
+				3663C99529EC835300E64A0A /* BaseView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -122,6 +138,9 @@
 				3637A4A729DB43D300289A15 /* MapView.swift */,
 				369B6E3F29E04B8900391F13 /* PlaceListView.swift */,
 				36110C6729E71235000ED129 /* StampImageCell.swift */,
+				3663C99829EC83E200E64A0A /* WritingPageView.swift */,
+				36FDB8D429ED9A3E001BF247 /* HeartView.swift */,
+				36FDB8D829EDB38E001BF247 /* UploadView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +155,8 @@
 				369A6F2A29BF0C4500414D23 /* MypageViewController.swift */,
 				36878AE029CC2C34007F6DE5 /* NotificationTableViewController.swift */,
 				3663C98429EAA63C00E64A0A /* CameraViewController.swift */,
+				3663C99329EC82B700E64A0A /* WritingPageViewController.swift */,
+				36FDB8D629EDB2EC001BF247 /* UploadViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -293,19 +314,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				36E8595929D1BA1000D3CA7D /* NotificationTableViewCell.swift in Sources */,
+				36FDB8D729EDB2EC001BF247 /* UploadViewController.swift in Sources */,
 				36878AC829CB05BE007F6DE5 /* SignUpViewController.swift in Sources */,
 				363D369729CA104400B37A21 /* SignInView.swift in Sources */,
 				36FB763729D60FD10070ED30 /* AddButton.swift in Sources */,
 				369A6F1029BF030D00414D23 /* AppDelegate.swift in Sources */,
 				367899B029C053D200155269 /* HorizontalScrollView.swift in Sources */,
 				369A6F2D29BF0C5B00414D23 /* MapViewController.swift in Sources */,
+				3663C99929EC83E200E64A0A /* WritingPageView.swift in Sources */,
 				3637A4D229DDA4B200289A15 /* PlaceListTableViewCell.swift in Sources */,
+				3663C99429EC82B700E64A0A /* WritingPageViewController.swift in Sources */,
 				36110C6829E71235000ED129 /* StampImageCell.swift in Sources */,
 				36110C2329E3BBA2000ED129 /* UIView+.swift in Sources */,
 				363D369929CA292900B37A21 /* UserInfoModel.swift in Sources */,
 				36FB763929D6145B0070ED30 /* profileView.swift in Sources */,
 				36E8595729D1AF2D00D3CA7D /* Model.swift in Sources */,
 				369A6F1229BF030D00414D23 /* SceneDelegate.swift in Sources */,
+				3663C99229EC7F2E00E64A0A /* UIViewController+.swift in Sources */,
 				363D368D29C9D81A00B37A21 /* SignInViewController.swift in Sources */,
 				3637A49C29DAF3D900289A15 /* PlaceListViewController.swift in Sources */,
 				369A6F2429BF04E000414D23 /* MainTabBarController.swift in Sources */,
@@ -314,9 +339,12 @@
 				36110C6629E592A4000ED129 /* UIColor+.swift in Sources */,
 				36110C6E29E72D7B000ED129 /* Image.swift in Sources */,
 				36878AE129CC2C34007F6DE5 /* NotificationTableViewController.swift in Sources */,
+				36FDB8D529ED9A3E001BF247 /* HeartView.swift in Sources */,
 				3637A4A829DB43D300289A15 /* MapView.swift in Sources */,
 				369B6E4029E04B8900391F13 /* PlaceListView.swift in Sources */,
 				369A6F2B29BF0C4500414D23 /* MypageViewController.swift in Sources */,
+				3663C99629EC835300E64A0A /* BaseView.swift in Sources */,
+				36FDB8D929EDB38E001BF247 /* UploadView.swift in Sources */,
 				369A6F2929BF0C3D00414D23 /* MainViewController.swift in Sources */,
 				36110C2529E3BC0D000ED129 /* UIStackView+.swift in Sources */,
 			);

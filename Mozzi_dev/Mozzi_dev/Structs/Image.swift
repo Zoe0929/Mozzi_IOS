@@ -16,4 +16,8 @@ struct Images {
     static let cameraButtonImage = UIImage(named: "camera")
     static let fileButtonImage = UIImage(named: "file")
     static let writeButtonImage = UIImage(named: "edit")
+    static let photoAddButtonImage = UIImage(named: "photoAddButton")
+    static let moreCategoryButtonImage = UIImage(named: "moreCategory")
+    static let emptyHeartImage = UIImage(named: "heart_empty")
+    static let fillHeartImage = UIImage(named: "heart_fill")
 }
