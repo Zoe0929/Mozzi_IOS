@@ -70,9 +70,7 @@ class SignInViewController: UIViewController {
             make.top.equalToSuperview().offset(160)
         }
         
-        [idField,passwordField].map{
-            inputStackView.addArrangedSubview($0)
-        }
+        inputStackView.addArrangeSubViews(idField,passwordField)
         
         inputStackView.snp.makeConstraints { make in
             make.top.equalTo(loginImageView.snp.bottom).offset(24)
@@ -112,9 +110,8 @@ class SignInViewController: UIViewController {
         }
         
         
-        [findPwButton,helpButton].map{
-            bottomStackView.addArrangedSubview($0)
-        }
+        bottomStackView.addArrangeSubViews(findPwButton,helpButton)
+        
         bottomStackView.snp.makeConstraints{ make in
             make.bottom.equalTo(view.snp.bottom).offset(-34)
             make.left.equalToSuperview().offset(34)
