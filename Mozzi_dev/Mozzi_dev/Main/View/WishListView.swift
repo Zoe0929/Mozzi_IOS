@@ -20,12 +20,20 @@ class WishListView: UIView {
         return label
     }()
     
-    private let wishImage = UIImage(named:"wishImage")
-    
-    private let wishImageView: UIImageView = {
+     let wishImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named:"wishImage")
+         imageView.backgroundColor = .systemGray5
+         imageView.makeCornerRound(radius: 5)
+         imageView.makeBorder(width: 1, color: .mozziDark)
         return imageView
+    }()
+    
+    lazy var appendButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("새로 등록", for: .normal)
+        button.setTitleColor(.mozziMain, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 12)
+        return button
     }()
     
     private let newButton: UIButton = {
@@ -101,8 +109,12 @@ class WishListView: UIView {
 
 private extension WishListView {
     func setLayout() {
-        
+        wishImageView.addSubview(appendButton)
         addSubviews(wishLabel,wishStackView,valSlider)
+        
+        appendButton.snp.makeConstraints{
+            $0.center.equalToSuperview()
+        }
         
         wishLabel.snp.makeConstraints{
             $0.top.equalToSuperview().offset(10)

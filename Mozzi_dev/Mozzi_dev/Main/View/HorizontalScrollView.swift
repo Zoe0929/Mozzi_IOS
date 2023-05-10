@@ -11,26 +11,12 @@ import UIKit
 import SnapKit
 
 
-class BaseScrollView: UIScrollView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        configure()
-    }
-
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("Not implemented xib init")
-    }
-
-    func configure() {}
-    func bind() {}
-}
-
 
 class HorizontalScrollView: BaseScrollView {
     
-    private lazy var stackView: UIStackView = {
+    private let dummy = Consum1.dummy()
+    
+    lazy var stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .horizontal
         view.layoutMargins = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30)
@@ -38,39 +24,61 @@ class HorizontalScrollView: BaseScrollView {
         return view
     }()
     
-    var dataSource: [SomeDataModel]? {
-         didSet { bind() }
-     }
+    var dataSource: [Consum]? {
+        didSet { bind() }
+    }
+    
+    
     
     override func configure() {
-            super.configure()
-
-            showsHorizontalScrollIndicator = false
-            bounces = false
-
-            addSubview(stackView)
-            stackView.snp.makeConstraints { make in
-                make.leading.trailing.equalToSuperview() /// 이 값이 없으면 scroll 안되는 것 주의
-                make.height.equalToSuperview()
-            }
+        super.configure()
+        showsHorizontalScrollIndicator = false
+        bounces = false
+        
+        addSubview(stackView)
+        stackView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview() /// 이 값이 없으면 scroll 안되는 것 주의
+            make.height.equalTo(80)
         }
-    override func bind() {
+    }
+    func bind(_ date: String){
         super.bind()
-
-        dataSource?.forEach { data in
-            let button = UIButton()
-            button.makeCornerRound(radius: 40)
-            button.makeShadow(radius: 0, offset: CGSize(width: 3, height: 3), opacity: 0.8)
-            button.layer.shadowColor = UIColor.mozziDark.cgColor
-            button.setTitleColor(.darkGray, for: .normal)
-            button.setTitle(data.name, for: .normal)
-            button.backgroundColor = .mozziMain
-
-            stackView.addArrangedSubview(button)
-            button.snp.makeConstraints { make in
-                make.width.equalTo(150)
-                make.height.equalTo(80)
+        //       let VC = MainViewController()
+        dummy.forEach { data in
+            
+            if(data.date == date ){
+                let view = DaliyUseView()
+                stackView.addArrangedSubview(view)
+                view.configure(data)
+                view.snp.makeConstraints{
+                    $0.width.equalTo(150)
+                    $0.height.equalTo(72)
+                }
             }
+            //          view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(VC.viewTapped)))
+            
+        }
+        
+        func removeAllView() {
+            stackView.clearSubViews()
+        }
+        
+        func bind() {
+            super.bind()
+            //       let VC = MainViewController()
+            dummy.forEach { data in
+                let view = DaliyUseView()
+                stackView.addArrangedSubview(view)
+                view.configure(data)
+                //          view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(VC.viewTapped)))
+                view.snp.makeConstraints{
+                    $0.width.equalTo(150)
+                    $0.height.equalTo(72)
+                }
+            }
+            
+            
+            
         }
     }
 }
