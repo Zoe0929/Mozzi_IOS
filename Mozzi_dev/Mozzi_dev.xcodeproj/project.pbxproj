@@ -34,6 +34,8 @@
 		369B6E3B29E044E900391F13 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 369B6E3A29E044E900391F13 /* SnapKit */; };
 		369B6E3E29E044F600391F13 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 369B6E3D29E044F600391F13 /* FSCalendar */; };
 		369B6E4029E04B8900391F13 /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369B6E3F29E04B8900391F13 /* PlaceListView.swift */; };
+		36A76D1F2A1366DD00342AC3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A76D1E2A1366DD00342AC3 /* DetailViewController.swift */; };
+		36A76D212A13672200342AC3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A76D202A13672200342AC3 /* DetailView.swift */; };
 		36E8595729D1AF2D00D3CA7D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E8595629D1AF2D00D3CA7D /* Model.swift */; };
 		36E8595929D1BA1000D3CA7D /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E8595829D1BA1000D3CA7D /* NotificationTableViewCell.swift */; };
 		36F51E562A0AA13400381402 /* StampImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F51E552A0AA13400381402 /* StampImages.swift */; };
@@ -95,6 +97,8 @@
 		369A6F2A29BF0C4500414D23 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		369A6F2C29BF0C5B00414D23 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		369B6E3F29E04B8900391F13 /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
+		36A76D1E2A1366DD00342AC3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		36A76D202A13672200342AC3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		36E8595629D1AF2D00D3CA7D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		36E8595829D1BA1000D3CA7D /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		36F51E552A0AA13400381402 /* StampImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampImages.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 				36110C6729E71235000ED129 /* StampImageCell.swift */,
 				36FB763A29D614730070ED30 /* WishListView.swift */,
 				36F51E612A0B75CB00381402 /* WritingPageView.swift */,
+				36A76D202A13672200342AC3 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				3663C98429EAA63C00E64A0A /* CameraViewController.swift */,
 				36F51E8A2A0B78DE00381402 /* WritingPageViewController.swift */,
 				36F51E842A0B787400381402 /* OCRViewController.swift */,
+				36A76D1E2A1366DD00342AC3 /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 				36F51E812A0B783900381402 /* UIStackView+.swift in Sources */,
 				36110C6829E71235000ED129 /* StampImageCell.swift in Sources */,
 				36F51E602A0B75A200381402 /* OCRImportView.swift in Sources */,
+				36A76D212A13672200342AC3 /* DetailView.swift in Sources */,
 				36110C2329E3BBA2000ED129 /* UIView+.swift in Sources */,
 				36F51E792A0B774F00381402 /* Image.swift in Sources */,
 				363D369929CA292900B37A21 /* UserInfoModel.swift in Sources */,
@@ -414,6 +421,7 @@
 				363D368D29C9D81A00B37A21 /* SignInViewController.swift in Sources */,
 				3637A49C29DAF3D900289A15 /* PlaceListViewController.swift in Sources */,
 				369A6F2429BF04E000414D23 /* MainTabBarController.swift in Sources */,
+				36A76D1F2A1366DD00342AC3 /* DetailViewController.swift in Sources */,
 				3663C98529EAA63C00E64A0A /* CameraViewController.swift in Sources */,
 				36F51E772A0B773000381402 /* UIFont+.swift in Sources */,
 				36FB763B29D614730070ED30 /* WishListView.swift in Sources */,

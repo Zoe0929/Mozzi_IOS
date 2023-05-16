@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let mainTabBarController = MainTabBarController()
         // 맨 처음 보여줄 ViewController
 
-        window?.rootViewController = mainTabBarController
+        window?.rootViewController = mainViewController
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
     }
