@@ -9,7 +9,13 @@ import UIKit
 import SnapKit
 
 class DetailViewController: UIViewController {
+    let detailView = DetailView()
+    
+    override func loadView() {
+        self.view = detailView
+    }
+    
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
     }
 }
