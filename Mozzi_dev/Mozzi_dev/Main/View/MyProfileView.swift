@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class profileView: UIView {
+class MyProfileView: UIView {
     
     let addProfileImage = UIImage(named: "addProfile")
     var name: String = "이름"

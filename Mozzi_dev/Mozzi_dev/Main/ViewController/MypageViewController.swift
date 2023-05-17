@@ -29,7 +29,7 @@ class MypageViewController: UITabBarController {
             self.stampcollectionView.reloadData()
         }
     }
-    lazy var profileView = Mozzi_dev.profileView()
+    lazy var profileView = Mozzi_dev.MyProfileView()
     lazy var wishLishView = WishListView()
     var stampcollectionView : UICollectionView = {
         var layout = UICollectionViewFlowLayout()
