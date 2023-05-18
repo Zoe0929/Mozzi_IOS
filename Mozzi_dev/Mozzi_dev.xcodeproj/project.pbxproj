@@ -34,6 +34,7 @@
 		369B6E3B29E044E900391F13 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 369B6E3A29E044E900391F13 /* SnapKit */; };
 		369B6E3E29E044F600391F13 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 369B6E3D29E044F600391F13 /* FSCalendar */; };
 		369B6E4029E04B8900391F13 /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369B6E3F29E04B8900391F13 /* PlaceListView.swift */; };
+		369E1B452A15595C00E46841 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369E1B442A15595C00E46841 /* LineView.swift */; };
 		36A76D1F2A1366DD00342AC3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A76D1E2A1366DD00342AC3 /* DetailViewController.swift */; };
 		36A76D212A13672200342AC3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A76D202A13672200342AC3 /* DetailView.swift */; };
 		36A76D232A14C84200342AC3 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A76D222A14C84200342AC3 /* ProfileHeaderView.swift */; };
@@ -102,6 +103,7 @@
 		369A6F2A29BF0C4500414D23 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		369A6F2C29BF0C5B00414D23 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		369B6E3F29E04B8900391F13 /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
+		369E1B442A15595C00E46841 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		36A76D1E2A1366DD00342AC3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		36A76D202A13672200342AC3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		36A76D222A14C84200342AC3 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				36A76D202A13672200342AC3 /* DetailView.swift */,
+				369E1B442A15595C00E46841 /* LineView.swift */,
 				36A76D222A14C84200342AC3 /* ProfileHeaderView.swift */,
 				36A76D252A14DB1E00342AC3 /* InfoUnitCollectionViewCell.swift */,
 				36A76D292A14DBC000342AC3 /* MapUnitCollectionViewCell.swift */,
@@ -420,6 +423,7 @@
 				36878AC829CB05BE007F6DE5 /* SignUpViewController.swift in Sources */,
 				363D369729CA104400B37A21 /* SignInView.swift in Sources */,
 				36F51E892A0B78C000381402 /* UploadRes.swift in Sources */,
+				369E1B452A15595C00E46841 /* LineView.swift in Sources */,
 				36A76D232A14C84200342AC3 /* ProfileHeaderView.swift in Sources */,
 				36F51E8D2A0B7A2100381402 /* BaseScrollView.swift in Sources */,
 				36F51E562A0AA13400381402 /* StampImages.swift in Sources */,

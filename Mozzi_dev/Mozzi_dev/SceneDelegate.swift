@@ -17,10 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         let mainViewController = SignInViewController()
-        let mainTabBarController = MainTabBarController()
+        let mainTabBarController = DetailViewController()
         // 맨 처음 보여줄 ViewController
 
-        window?.rootViewController = mainViewController
+        window?.rootViewController = mainTabBarController
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
     }
