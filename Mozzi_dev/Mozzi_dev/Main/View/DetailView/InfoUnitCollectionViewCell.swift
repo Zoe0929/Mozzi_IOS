@@ -11,9 +11,10 @@ final class InfoUnitCollectionViewCell: UICollectionViewCell, CollectionViewCell
     
     private lazy var infoStackView : UIStackView = {
         let stackView = UIStackView()
-        stackView.addArrangeSubViews(mainImageView,itemTitleLabel,locationLabel,priceLabel)
+        stackView.addArrangeSubViews(mainImageView,labelView,itemTitleLabel,locationLabel,priceLabel)
         stackView.axis = .vertical
-        stackView.spacing = 8
+        stackView.spacing = 10
+        stackView.alignment = .leading
         return stackView
     }()
     
@@ -22,6 +23,20 @@ final class InfoUnitCollectionViewCell: UICollectionViewCell, CollectionViewCell
         imageView.makeCornerRound(radius: 10)
         imageView.backgroundColor = .gray
         return imageView
+    }()
+    
+    private let categoryLabel: UILabel = {
+        let label = UILabel()
+        label.text = "식사"
+        label.font = .pretendardMedium(ofSize: 10)
+        label.textColor = .white
+        return label
+    }()
+    private let labelView: UIView = {
+       let view = UIView()
+        view.backgroundColor = .mozziMain
+        view.makeCornerRound(radius: 10)
+        return view
     }()
     
     private let itemTitleLabel: UILabel = {
@@ -61,15 +76,27 @@ final class InfoUnitCollectionViewCell: UICollectionViewCell, CollectionViewCell
     
     private func setViewHierarchy() {
         self.addSubviews(infoStackView)
+        labelView.addSubview(categoryLabel)
     }
     
     private func setConstraints() {
         infoStackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.center.equalToSuperview()
         }
+        
+        labelView.snp.makeConstraints{
+            $0.width.equalTo(32)
+            $0.height.equalTo(20)
+        }
+        
+        categoryLabel.snp.makeConstraints{
+            $0.center.equalToSuperview()
+        }
+        
         mainImageView.snp.makeConstraints {
             $0.width.equalTo(340)
             $0.height.equalTo(170)
+            $0.centerX.equalToSuperview()
         }
     }
     

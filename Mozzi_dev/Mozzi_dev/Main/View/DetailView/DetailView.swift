@@ -7,7 +7,6 @@
 
 import UIKit
 import SnapKit
-import Then
 
 class DetailView : BaseView {
     let profileView = ProfileHeaderView()
@@ -16,6 +15,7 @@ class DetailView : BaseView {
         let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: createLayout())
         
         collectionView.register(ProfileHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeaderView.identifier)
+        collectionView.register(LineView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LineView.identifier)
         
         InfoUnitCollectionViewCell.register(collectionView: collectionView)
         MapUnitCollectionViewCell.register(collectionView: collectionView)
@@ -28,7 +28,6 @@ class DetailView : BaseView {
     
     
     func setViewHierarchy() {
-        self.backgroundColor = .gray
         self.addSubviews(collectionView)
     }
     
@@ -44,7 +43,7 @@ class DetailView : BaseView {
         //        }
     }
     
-    let a: Dictionary
+    
 }
 
 
@@ -55,10 +54,19 @@ extension DetailView {
         let layout = UICollectionViewCompositionalLayout { [weak self] sectionIndex, _ -> NSCollectionLayoutSection? in
             guard let self = self else { return nil }
             let section: NSCollectionLayoutSection
+            let footerSize = NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: .absolute(1.0)
+            )
+            let footer = NSCollectionLayoutBoundarySupplementaryItem(
+                layoutSize: footerSize,
+                elementKind: UICollectionView.elementKindSectionFooter,
+                alignment: .bottom
+            )
             
             // Define layouts for different sections
             switch sectionIndex {
-            case 0: // Profile header section
+            case 0: // Profile header section / info section
                 let headerSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
                     heightDimension: .absolute(35)
@@ -71,16 +79,16 @@ extension DetailView {
                 
                 let itemSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
-                    heightDimension: .estimated(35)
+                    heightDimension: .absolute(295)
                 )
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, repeatingSubitem: item, count: 1)
                 
                 section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 22, bottom: 10, trailing: 22)
-                section.boundarySupplementaryItems = [header]
+                section.boundarySupplementaryItems = [header,footer]
                 
-            case 1: // Info unit section
+            case 1: // Map unit section
                 let itemSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
                     heightDimension: .absolute(196)
@@ -90,33 +98,26 @@ extension DetailView {
                 
                 section = NSCollectionLayoutSection(group: group)
                 section.interGroupSpacing = 8
-                section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 22, bottom: 16, trailing: 22)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 22, bottom: 20, trailing: 22)
+                section.boundarySupplementaryItems = [footer]
                 
-            case 2: // Map unit section
+            case 2: // Detail unit section
                 
                 let itemSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
-                    heightDimension: .absolute(196)
+                    heightDimension: .absolute(80)
                 )
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, repeatingSubitem: item, count: 1)
                 
                 section = NSCollectionLayoutSection(group: group)
-                
-            case 3: // Detail unit section
-                let itemSize = NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1),
-                    heightDimension: .absolute(200)
-                )
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, repeatingSubitem: item, count: 1)
-                
-                section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 16, trailing: 20)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 22, bottom: 20, trailing: 22)
                 
             default:
                 return nil
             }
+            
+            
             
             return section
         }
@@ -153,14 +154,34 @@ extension DetailView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard kind == UICollectionView.elementKindSectionHeader, // 헤더일때
-              let header = collectionView.dequeueReusableSupplementaryView(
+        if kind == UICollectionView.elementKindSectionHeader {
+            guard let header = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
                 withReuseIdentifier: ProfileHeaderView.identifier,
                 for: indexPath
-              ) as? ProfileHeaderView else {return UICollectionReusableView()}
+            ) as? ProfileHeaderView else {
+                return UICollectionReusableView()
+            }
+            return header
+        } else if kind == UICollectionView.elementKindSectionFooter {
+            // Dequeue reusable supplementary view for footer
+            guard let footer = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: LineView.identifier, // 보조 뷰의 식별자를 지정해야 함
+                for: indexPath
+            ) as? LineView else {
+                return UICollectionReusableView()
+            }
+            // Configure and return the footer view
+            
+            // ...
+            // 보조 뷰에 대한 구성 및 설정 작업
+            
+            return footer
+        }
         
-        return header
+        return UICollectionReusableView()
     }
+    
 }
 
